@@ -5,8 +5,8 @@
   --orange: #f48915;
   --darkGrey: #464D53;
   --caloryCard: #656565;
-  --planCard: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
-  --appColor:  #3c3f45;
+  --planCard: linear-gradient(210deg, #fa5042 1.14%, #ffa739 100%);
+  --appColor: #3c3f45;
 }
 
 .App {
@@ -18,6 +18,59 @@
   gap: 6rem;
   overflow: hidden;
 }
-::-webkit-scrollbar{
-  display: none;
+
+::-webkit-scrollbar {
+  background-color:#656565;
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 50px;
+  border: 1px solid #464D53;
+}
+
+.stroke-text {
+  color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.btn {
+  background-color: white;
+  padding: 0.5rem;
+  font-weight: bold;
+  border: 4px solid transparent;
+  transition: 300ms all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.blur {
+  background: rgba(253, 120, 43, 0.69);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: -9;
+}
+
+.btn-fix {
+  position: fixed;
+  bottom: 10rem;
+  right: -2rem;
+  z-index: 1000;
+  border: none;
+  padding: .5rem;
+  background: rgba(0, 0, 0, 0.356);
+  transform: rotate(-90deg);
+  font-weight: bold;
+  font-size: large;
+  color: var(--orange);
+  text-decoration: none;
 }
